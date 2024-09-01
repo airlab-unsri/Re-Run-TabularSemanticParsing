@@ -174,7 +174,7 @@ def load_data_split_spider(in_dir, split, schema_graphs, aug_tag='', augment_wit
         return None
     data_split = []
     num_train_exps_by_db = collections.defaultdict(int)
-    with open(in_json) as f:
+    with open(in_json, 'r', encoding='utf-8') as f:
         content = json.load(f)
         for example in content:
             db_name = example['db_id']

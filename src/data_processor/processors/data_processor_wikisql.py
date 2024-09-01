@@ -39,7 +39,7 @@ def preprocess_example(split, example, args, parsed_programs, text_tokenize, pro
         schema_size = s_M.shape[0]
         text_size = len(text_features)
         full_size = schema_size + text_size
-        M = ssp.lil_matrix((full_size, full_size), dtype=np.int)
+        M = ssp.lil_matrix((full_size, full_size), dtype=np.int_)
         M[-schema_size:, -schema_size:] = s_M
         return M
 

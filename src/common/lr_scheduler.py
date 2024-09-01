@@ -9,7 +9,7 @@
 """
 
 from torch.optim import Optimizer
-from torch._six import inf
+from torch import inf
 from functools import partial
 
 

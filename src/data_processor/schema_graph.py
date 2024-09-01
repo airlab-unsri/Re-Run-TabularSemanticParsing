@@ -922,7 +922,7 @@ class SchemaGraph(object):
                 self.bert_feature_idx_rev[schema_pos] = field_node
                 schema_pos += 1
 
-        M = ssp.lil_matrix((self.num_nodes + 1, self.num_nodes + 1), dtype=np.int)
+        M = ssp.lil_matrix((self.num_nodes + 1, self.num_nodes + 1), dtype=np.int_)
         table_field_ids = [table_field_ids[i] for i in table_field_ids.keys()]
         for t_idx in range(len(table_field_ids)):
             t_schema_pos = self.get_schema_pos(self.table_rev_index[t_idx].signature)
@@ -939,14 +939,14 @@ class SchemaGraph(object):
                     if f2_idx != f_idx:
                         f2_node = self.field_rev_index[f2_idx]
                         f2_schema_pos = self.get_schema_pos(f2_node.signature)
-                        # try:
-                        M[f_schema_pos, f2_schema_pos] = SAME_TABLE
-                        M[f2_schema_pos, f_schema_pos] = SAME_TABLE
-                        # except Exception:
-                        #     print(f_schema_pos, f2_schema_pos)
-                        #     import pdb
-                        #     pdb.set_trace()
-
+                        try:
+                            M[f_schema_pos, f2_schema_pos] = SAME_TABLE
+                            M[f2_schema_pos, f_schema_pos] = SAME_TABLE
+                        except IndexError as e:
+                            print(f"IndexError caught: {e}")
+                            print(f"f_schema_pos: {f_schema_pos}, f2_schema_pos: {f2_schema_pos}, num_nodes: {self.num_nodes}")
+                            raise
+                        
         for f1_idx, f2_idx in self.foreign_key_pairs:
             f1_node = self.field_rev_index[f1_idx]
             f2_node = self.field_rev_index[f2_idx]
