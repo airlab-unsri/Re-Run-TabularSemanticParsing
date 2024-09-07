@@ -159,7 +159,7 @@ def ensemble():
 
     sps = [EncoderDecoderLFramework(args) for _ in ensemble_model_dirs]
     for i, model_dir in enumerate(ensemble_model_dirs):
-        checkpoint_path = os.path.join(model_dir, 'model-best.16.tar')
+        checkpoint_path = os.path.join('../model/bridge-spider-bert-large-ems-70-1-exe-68-2.tar', 'model-best.16.tar')
         sps[i].schema_graphs = dataset['schema']
         sps[i].load_checkpoint(checkpoint_path)
         sps[i].cuda()
