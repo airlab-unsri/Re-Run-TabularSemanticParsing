@@ -12,7 +12,7 @@ model_dirs = [
     # 'model/model_analysis/spider.bridge.ppl.2.dn.eo.feat.bert-large-uncased.xavier-1024-384-384-16-2-0.0005-inv-sqr-0.0005-4000-6e-05-inv-sqr-3e-05-4000-0.3-0.3-0.0-0.0-1-8-0.0-0.0-res-0.2-0.0-ff-0.4-0.0.201216-111910.g965',
     # 'model/model_analysis/spider.bridge.ppl.2.dn.eo.feat.bert-large-uncased.xavier-1024-384-384-16-2-0.0005-inv-sqr-0.0005-4000-6e-05-inv-sqr-3e-05-4000-0.3-0.3-0.0-0.0-1-8-0.0-0.0-res-0.2-0.0-ff-0.4-0.0.201216-111910.o6jm',
     # 'model/model_analysis/spider.bridge.ppl.2.dn.eo.feat.bert-large-uncased.xavier-1024-384-384-16-2-0.0005-inv-sqr-0.0005-4000-6e-05-inv-sqr-3e-05-4000-0.3-0.3-0.0-0.0-1-8-0.0-0.0-res-0.2-0.0-ff-0.4-0.0.201216-111913.hptm'
-    'model\spider.bridge.lstm.meta.ts.ppl-0.85.2.dn.eo.feat.bert-large-uncased.xavier-1024-400-400-1-2-0.0005-inv-sqr-0.0005-4000-6e-05-inv-sqr-3e-05-4000-0.3-0.3-0.0-0.0-1-8-0.0-0.0-res-0.2-0.0-ff-0.4-0.0.240901-120111.ira3\model-best.16.tar'
+    '\model\\bridge-spider-bert-large-ems-70-1-exe-68-2.tar\model-best.16.tar'
     # 'model/ensemble_analysis/spider.sqlova.lstm.meta.ts.ppl-0.85.2.dn.eo.feat.bert-large-uncased.xavier-1024-400-400-16-2-0.0005-inv-sqr-0.0005-4000-6e-05-inv-sqr-3e-05-4000-0.3-0.3-0.0-0.0-1-8-0.0-0.0-res-0.2-0.0-ff-0.4-0.0.201218-093155.gjrk/',
     # 70.1, 68.2
     # 'model/ensemble_analysis/spider.sqlova.lstm.meta.ts.ppl-0.85.2.dn.eo.feat.bert-large-uncased.xavier-1024-400-400-16-2-0.0005-inv-sqr-0.0005-4000-6e-05-inv-sqr-3e-05-4000-0.3-0.3-0.0-0.0-1-8-0.0-0.0-res-0.2-0.0-ff-0.4-0.0.201218-093255.vn2k/',

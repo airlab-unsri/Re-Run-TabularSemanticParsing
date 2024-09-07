@@ -10,7 +10,7 @@
 from transformers import BertTokenizer
 
 
-tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
+tokenizer = BertTokenizer.from_pretrained('indolem/indobert-base-uncased')
 bt = tokenizer
 
 pad_token = tokenizer.pad_token

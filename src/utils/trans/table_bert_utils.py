@@ -11,8 +11,7 @@ import os
 from transformers import BertTokenizer
 
 
-tokenizer = BertTokenizer.from_pretrained(os.path.join(
-    os.path.dirname(os.path.realpath(__file__)), 'table-bert-checkpoint'))
+tokenizer = BertTokenizer.from_pretrained('indolem/indobert-base-uncased')
 bt = tokenizer
 
 pad_token = tokenizer.pad_token
