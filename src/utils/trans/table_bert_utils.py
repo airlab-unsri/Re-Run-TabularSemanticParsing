@@ -8,10 +8,10 @@
 """
 
 import os
-from transformers import BertTokenizer
+from transformers import AutoTokenizer
 
 
-tokenizer = BertTokenizer.from_pretrained('indolem/indobert-base-uncased')
+tokenizer = AutoTokenizer.from_pretrained("indolem/indobert-base-uncased")
 bt = tokenizer
 
 pad_token = tokenizer.pad_token
