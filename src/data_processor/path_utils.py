@@ -149,9 +149,9 @@ def get_atomic_value_tag(args):
 
 
 def get_tokenizer_tag(args):
-    if args.pretrained_transformer.startswith('bert-') and args.pretrained_transformer.endswith('-uncased'):
+    if args.pretrained_transformer.startswith('indolem/indobert-') and args.pretrained_transformer.endswith('-uncased'):
         return 'bert.'
-    elif args.pretrained_transformer.startswith('bert-') and args.pretrained_transformer.endswith('-cased'):
+    elif args.pretrained_transformer.startswith('indolem/indobert-') and args.pretrained_transformer.endswith('-cased'):
         return 'bert.cased.'
     elif args.pretrained_transformer.startswith('roberta'):
         return 'roberta.'

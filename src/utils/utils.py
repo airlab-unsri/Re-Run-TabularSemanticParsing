@@ -223,10 +223,10 @@ def get_sub_token_ids(question_tokens, span_ids, tu):
 
 
 def get_trans_utils(args):
-    if args.pretrained_transformer.startswith('bert-') and args.pretrained_transformer.endswith('-uncased'):
+    if args.pretrained_transformer.startswith('indolem/indobert-') and args.pretrained_transformer.endswith('-uncased'):
         import src.utils.trans.bert_utils as bu
         return bu
-    elif args.pretrained_transformer.startswith('bert-') and args.pretrained_transformer.endswith('-cased'):
+    elif args.pretrained_transformer.startswith('indolem/indobert-') and args.pretrained_transformer.endswith('-cased'):
         import src.utils.trans.bert_cased_utils as bcu
         return bcu
     elif args.pretrained_transformer.startswith('roberta-'):

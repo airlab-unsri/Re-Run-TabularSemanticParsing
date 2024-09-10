@@ -30,7 +30,7 @@ def preprocess_example(split, example, args, parsed_programs, text_tokenize, pro
     program_vocab = vocabs['program']
 
     def get_memory_values(features, raw_text, args):
-        if args.pretrained_transformer.startswith('bert-') and args.pretrained_transformer.endswith('-uncased'):
+        if args.pretrained_transformer.startswith('indolem/indobert-') and args.pretrained_transformer.endswith('-uncased'):
             return utils.restore_feature_case(features, raw_text, tu)
         else:
             return features
