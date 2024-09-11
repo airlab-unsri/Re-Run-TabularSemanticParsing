@@ -13,7 +13,7 @@ from src.parse_args import parser
 
 code_base_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 args = ['--demo', '--ensemble_inference', '--gpu', '0']
-with open(os.path.join(code_base_dir, 'configs', 'bridge', 'spider-bridge-bert-large.sh')) as f:
+with open(os.path.join(code_base_dir, 'configs', 'bridge', 'spider-bridge-indolem/indobert-large.sh')) as f:
     for line in f:
         if line.strip() and not line.startswith('#'):
             name, value = line.strip().split('=')

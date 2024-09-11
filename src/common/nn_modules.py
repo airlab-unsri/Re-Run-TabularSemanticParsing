@@ -16,7 +16,7 @@ import torch.nn.functional as F
 from torch.nn.utils.rnn import pack_padded_sequence as pack
 from torch.nn.utils.rnn import pad_packed_sequence as unpack
 
-from transformers import BertModel, RobertaModel
+from transformers import AutoModel, RobertaModel
 import src.common.ops as ops
 
 
@@ -47,12 +47,12 @@ class TransformerHiddens(nn.Module):
     """
     def __init__(self, model, dropout=0.0, requires_grad=False):
         super().__init__()
-        if model.startswith('bert'):
-            self.trans_parameters = BertModel.from_pretrained(model)
+        if model.startswith('indolem/indobert'):
+            self.trans_parameters = AutoModel.from_pretrained(model)
         elif model.startswith('roberta'):
             self.trans_parameters = RobertaModel.from_pretrained(model)
         elif model == 'table-bert':
-            self.trans_parameters = BertModel.from_pretrained(os.path.join(
+            self.trans_parameters = AutoModel.from_pretrained(os.path.join(
                 os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
                 'utils/trans/table-bert-checkpoint'
             ))
